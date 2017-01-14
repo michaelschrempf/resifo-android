@@ -15,6 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="at.fh.swengb.android_resifo.EditActivity"></activity>
+        <activity android:name="at.fh.swengb.android_resifo.PersonalActivity"></activity>
+        <activity android:name="at.fh.swengb.android_resifo.AnmeldungActivity"></activity>
     </application>
 
 </manifest>
