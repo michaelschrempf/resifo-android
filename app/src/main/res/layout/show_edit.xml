@@ -24,7 +24,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="WELCOME"
+                android:text="Edit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView5"
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:text="Edit"
+                android:text="Personaldaten"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_edit"
@@ -53,7 +53,7 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:text="View"
+                android:text="Anmeldung"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_view"
@@ -66,7 +66,7 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:text="Download"
+                android:text="Abmeldung"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_download"
@@ -75,11 +75,16 @@
 
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="179dp"
-            android:layout_height="wrap_content"
-            android:background="@mipmap/steiermarkwappen"
-            android:layout_marginTop="10px"
-            android:layout_marginLeft="170px"></LinearLayout>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:text="Startbildschirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button"
+                android:layout_weight="1" />
+        </LinearLayout>
 
     </LinearLayout>
 
