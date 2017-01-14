@@ -24,7 +24,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="Personaldaten"
+                android:text="Personaldaten #2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView5"
@@ -42,7 +42,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
-                android:text="Familienname + Titel"
+                android:text="Angabe der ZM-Zahl (soweit bekannt)"
                 android:ems="10"
                 android:id="@+id/editText"
                 android:layout_weight="1"
@@ -54,15 +54,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
+            <TextView
+                android:text="Geburtsort"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="Vorname"
-                android:ems="10"
-                android:id="@+id/editText2"
+                android:id="@+id/textView3"
                 android:layout_weight="1"
-                android:textSize="14sp" />
+                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -74,43 +72,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
-                android:text="Familienname vor der ersten Eheschließung"
+                android:text="Geburtsort"
                 android:ems="10"
-                android:id="@+id/editText4"
-                android:layout_weight="1"
-                android:textSize="14sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="date"
-                android:ems="10"
-                android:id="@+id/editText3"
-                android:layout_weight="1"
-                android:text="Geburtstag"
-                android:textSize="14sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="Religionsbekenntnis"
-                android:ems="10"
-                android:id="@+id/editText5"
-                android:layout_weight="1"
-                android:textSize="14sp" />
+                android:id="@+id/editText11"
+                android:layout_weight="1" />
         </LinearLayout>
 
         <LinearLayout
@@ -119,7 +84,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="Geschlecht"
+                android:text="Reisedokument bei Fremden"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView"
@@ -133,30 +98,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:orientation="horizontal"
+            <EditText
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <RadioButton
-                    android:text="weiblich"
-                    android:layout_width="164dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton7" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <RadioButton
-                    android:text="männlich"
-                    android:layout_width="99dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton5" />
-
-            </LinearLayout>
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="Art, z.B.: Reisepass"
+                android:ems="10"
+                android:id="@+id/editText6"
+                android:layout_weight="1" />
 
         </LinearLayout>
 
@@ -165,8 +114,53 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText7"
+                android:layout_weight="1"
+                android:text="Nummer" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:ems="10"
+                android:id="@+id/editText8"
+                android:layout_weight="1"
+                android:text="Ausstellungsdatum" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="ausstellende Behörde"
+                android:ems="10"
+                android:id="@+id/editText9"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
             <TextView
-                android:text="Familienstand"
+                android:text="Staatsangehörigkeit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView2"
@@ -180,84 +174,45 @@
             android:layout_height="wrap_content">
 
             <LinearLayout
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" >
-
-                    <RadioButton
-                        android:text="verwitwet"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/radioButton19"
-                        android:layout_weight="1" />
-
-                    <RadioButton
-                        android:text="geschieden"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/radioButton18"
-                        android:layout_weight="1" />
-
-                    <RadioButton
-                        android:text="verheiratet"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/radioButton17"
-                        android:layout_weight="1" />
-
-                    <RadioButton
-                        android:text="ledig"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/radioButton16"
-                        android:layout_weight="1" />
-                </RadioGroup>
+                <RadioButton
+                    android:text="Österreich"
+                    android:layout_width="164dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton7" />
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="100px">
+                android:layout_height="wrap_content">
 
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" >
+                <RadioButton
+                    android:text="anderer Staat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton5" />
 
-                    <RadioButton
-                        android:text="eingetragene Partnerschaft aufgelöst (nichtig)"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/radioButton22"
-                        android:layout_weight="1" />
-
-                    <RadioButton
-                        android:text="eingetragene Partnerschaft lebend"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/radioButton21" />
-
-                    <RadioButton
-                        android:text="hinterbliebener eingetragener Partner"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/radioButton20"
-                        android:layout_weight="1" />
-
-                    <RadioButton
-                        android:text="Ehe aufgehoben (nichtig)"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/radioButton15"
-                        android:layout_weight="1"
-                        android:textSize="14sp" />
-                </RadioGroup>
             </LinearLayout>
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text=" Name des Staates"
+                android:ems="10"
+                android:id="@+id/editText10"
+                android:layout_weight="1" />
         </LinearLayout>
 
         <LinearLayout
