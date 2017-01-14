@@ -39,5 +39,5 @@
 </ul>
 
 <h1>This is our paperPrototype for our Project</h1>
-<img src="https://raw.githubusercontent.com/wase90168/android-resifo/master/paperPrototype/paperPrototype_1.jpg">
-<img src="https://raw.githubusercontent.com/wase90168/android-resifo/master/paperPrototype/paperPrototype_2.jpg">
+<img src="https://raw.githubusercontent.com/wase90168/resifo-android/master/paperPrototype/paperPrototype_1.jpg">
+<img src="https://raw.githubusercontent.com/wase90168/resifo-android/master/paperPrototype/paperPrototype_2.jpg">
