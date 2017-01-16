@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="at.fh.swengb.resifo_android.MainActivity">
+    tools:context="at.fh.swengb.android_resifo.AbmeldungActivity">
 
     <LinearLayout
         android:orientation="vertical"
@@ -31,7 +31,8 @@
                 android:layout_weight="1"
                 android:textSize="24sp"
                 android:textAlignment="center"
-                android:textStyle="normal|bold" />
+                android:textStyle="normal|bold"
+                android:textColor="@color/colorPrimaryDark" />
         </LinearLayout>
 
         <LinearLayout
@@ -43,11 +44,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
-                android:text="Straße"
                 android:ems="10"
                 android:id="@+id/editText"
                 android:layout_weight="1"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:hint="Straße" />
         </LinearLayout>
 
         <LinearLayout
@@ -62,8 +63,8 @@
                 android:ems="10"
                 android:id="@+id/editText16"
                 android:layout_weight="1"
-                android:text="Haus Nr."
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:hint="Haus Nr." />
 
             <EditText
                 android:layout_width="wrap_content"
@@ -72,8 +73,8 @@
                 android:ems="10"
                 android:id="@+id/editText17"
                 android:layout_weight="1"
-                android:text="Stiege"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:hint="Stiege" />
 
             <EditText
                 android:layout_width="wrap_content"
@@ -82,8 +83,8 @@
                 android:ems="10"
                 android:id="@+id/editText15"
                 android:layout_weight="1"
-                android:text="Tür Nr."
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:hint="Tür Nr." />
         </LinearLayout>
 
         <LinearLayout
@@ -95,10 +96,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
-                android:text="Ortsgemeinde"
                 android:ems="10"
                 android:id="@+id/editText19"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:hint="Ortsgemeinde" />
 
             <EditText
                 android:layout_width="wrap_content"
@@ -107,7 +108,7 @@
                 android:ems="10"
                 android:id="@+id/editText18"
                 android:layout_weight="1"
-                android:text="Postleitzahl" />
+                android:hint="Postleitzahl" />
         </LinearLayout>
 
         <LinearLayout
@@ -122,7 +123,9 @@
                 android:id="@+id/textView4"
                 android:layout_weight="1"
                 android:textAlignment="center"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textStyle="normal|bold"
+                android:textColor="@color/colorPrimaryDark" />
         </LinearLayout>
 
         <LinearLayout
@@ -154,10 +157,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
-                android:text="Angabe des Staates"
                 android:ems="10"
                 android:id="@+id/editText20"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:hint="Angabe des Staates" />
         </LinearLayout>
 
         <LinearLayout
@@ -166,7 +169,7 @@
             android:layout_width="match_parent">
 
             <Button
-                android:text="Startbildschirm"
+                android:text="Home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/button5"
@@ -174,7 +177,7 @@
                 android:onClick="GoBackHomeScreen" />
 
             <Button
-                android:text="Weiter zur Abmeldung"
+                android:text="Weiter zur Unterschrift"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/button2"

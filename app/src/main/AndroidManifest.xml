@@ -18,6 +18,7 @@
         <activity android:name="at.fh.swengb.android_resifo.EditActivity"></activity>
         <activity android:name="at.fh.swengb.android_resifo.PersonalActivity"></activity>
         <activity android:name="at.fh.swengb.android_resifo.AnmeldungActivity"></activity>
+        <activity android:name="at.fh.swengb.android_resifo.AbmeldungActivity"></activity>
     </application>
 
 </manifest>
