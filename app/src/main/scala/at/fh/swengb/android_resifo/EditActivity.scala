@@ -17,16 +17,16 @@ class EditActivity extends AppCompatActivity{
     val editPerson = new Intent(this, classOf[PersonalActivity])
     startActivity(editPerson)
   }
+  def GoToAbmeldung(view: View):Unit={
+    val goAbmeldung = new Intent(this,classOf[AbmeldungActivity])
+    startActivity(goAbmeldung)
+  }
   def GoBackHomeScreen(view: View):Unit={
     val homeBack = new Intent(this,classOf[MainActivity])
     startActivity(homeBack)
   }
-  def GoToAnmeldung(view: View):Unit={
-    val goAnmeldung = new Intent(this,classOf[AnmeldungActivity])
+  def GoToAnmeldung(view: View):Unit= {
+    val goAnmeldung = new Intent(this, classOf[AnmeldungActivity])
     startActivity(goAnmeldung)
-  }
-  def GotToAbmeldung(view: View):Unit={
-    val goAbmeldung = new Intent(this,classOf[PersonalActivity])
-    startActivity(goAbmeldung)
   }
 }
