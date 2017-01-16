@@ -14,8 +14,12 @@ class AnmeldungActivity extends AppCompatActivity{
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_anmeldung)
   }
-  def GoBackHomeScreen(view: View):Unit={
-    val homeBack = new Intent(this,classOf[MainActivity])
+  def GoBackEdit(view: View):Unit={
+    val homeBack = new Intent(this,classOf[EditActivity])
     startActivity(homeBack)
+  }
+  def GoToHauptWohnSitz(view: View):Unit={
+    val goTo = new Intent(this,classOf[HauptWohnActivity])
+    startActivity(goTo)
   }
 }

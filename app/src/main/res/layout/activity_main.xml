@@ -58,7 +58,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_view"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:onClick="viewData" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -73,7 +75,23 @@
                 android:id="@+id/btn_download"
                 android:layout_weight="1"
                 android:onClick="downLoad" />
+
         </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:text="Informationen für den Meldepflichtigen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button3"
+                android:layout_weight="1"
+                android:onClick="impressumActivity" />
+        </LinearLayout>
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -169,12 +169,12 @@
             android:layout_width="match_parent">
 
             <Button
-                android:text="Home"
+                android:text="Edit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/button5"
                 android:layout_weight="1"
-                android:onClick="GoBackHomeScreen" />
+                android:onClick="GoBackEdit" />
 
             <Button
                 android:text="Weiter zur Unterschrift"
