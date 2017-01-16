@@ -7,16 +7,15 @@ import android.view.View
 import at.fh.swengb.resifo_android.{MainActivity, R}
 
 /**
-  * Created by Kevin on 14.01.2017.
+  * Created by Kevin on 16.01.2017.
   */
-class AbmeldungActivity extends AppCompatActivity{
+class InformationActivity extends AppCompatActivity{
   override protected def onCreate(savedInstanceState: Bundle): Unit ={
     super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_abmeldung)
+    setContentView(R.layout.activity_information)
   }
-  def GoBackEdit(view: View):Unit={
-    val homeBack = new Intent(this,classOf[EditActivity])
-    startActivity(homeBack)
+  def GoBackHome(view: View):Unit={
+    val goHome = new Intent(this,classOf[MainActivity])
+    startActivity(goHome)
   }
-
 }
