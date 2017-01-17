@@ -31,7 +31,7 @@
                     android:text="Personaldaten"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView5"
+                    android:id="@+id/personalDatenUe"
                     android:layout_weight="1"
                     android:textSize="24sp"
                     android:textAlignment="center"
@@ -43,7 +43,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/editText"
+                    android:id="@+id/nachname"
                     android:layout_weight="1"
                     android:textSize="14sp"
                     android:hint="Familienname + Titel" />
@@ -53,7 +53,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/editText2"
+                    android:id="@+id/vorname"
                     android:layout_weight="1"
                     android:textSize="14sp"
                     android:hint="Vorname" />
@@ -63,7 +63,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/editText4"
+                    android:id="@+id/nachnameVor"
                     android:layout_weight="1"
                     android:textSize="14sp"
                     android:hint="Familienname vor der ersten Eheschließung" />
@@ -73,7 +73,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="date"
                     android:ems="10"
-                    android:id="@+id/editText3"
+                    android:id="@+id/geburtstag"
                     android:layout_weight="1"
                     android:textSize="14sp"
                     android:hint="Geburtstag" />
@@ -83,7 +83,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/editText5"
+                    android:id="@+id/religion"
                     android:layout_weight="1"
                     android:textSize="14sp"
                     android:hint="Religionsbekenntnis" />
@@ -92,7 +92,7 @@
                     android:text="Geschlecht"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView"
+                    android:id="@+id/textView200"
                     android:layout_weight="1"
                     android:textSize="18sp"
                     android:textAlignment="center"
@@ -349,7 +349,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/button2"
                         android:layout_weight="1"
-                        android:onClick="GoToAnmeldung" />
+                        android:onClick="saveToDb" />
 
                 </LinearLayout>
 
