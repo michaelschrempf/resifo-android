@@ -63,13 +63,13 @@ class DBHandler(context: Context)
   }
 
   // Adding new shop
-  def addShop(meldez: Meldez): Unit = {
+  def addMeldez(meldez: Meldez): Unit = {
     val db: SQLiteDatabase = this.getWritableDatabase
     val values: ContentValues = new ContentValues()
     // Shop Name
-    values.put(KEY_NAME, meldez.getName)
+    values.put(KEY_NAME, meldez.name)
     // Shop Phone Number
-    values.put(KEY_SH_ADDR, meldez.getSurname)
+    values.put(KEY_SH_ADDR, meldez.surname)
     // Inserting Row
     db.insert(TABLE_MELDEZ, null, values)
     // Closing database connection
@@ -77,7 +77,7 @@ class DBHandler(context: Context)
   }
 
   // Getting one shop
-  def getShop(id: Int): Meldez = {
+  def getMeldez(id: Int): Meldez = {
     val db: SQLiteDatabase = this.getReadableDatabase
     val cursor: Cursor = db.query(TABLE_MELDEZ,
       Array(KEY_ID, KEY_NAME, KEY_SH_ADDR),
@@ -97,7 +97,7 @@ class DBHandler(context: Context)
   }
 
   // Getting All Shops
-  def getAllShops(): List[Meldez] = {
+  def getAllMeldezs(): List[Meldez] = {
     val shopList: List[Meldez] = new ArrayList[Meldez]()
     // Select All Query
     val selectQuery: String = "SELECT * FROM " + TABLE_MELDEZ
@@ -106,10 +106,10 @@ class DBHandler(context: Context)
     // looping through all rows and adding to list
     if (cursor.moveToFirst()) {
       do {
-        val meldez: Meldez = new Meldez()
-        meldez.setId(java.lang.Integer.parseInt(cursor.getString(0)))
-        meldez.setName(cursor.getString(1))
-        meldez.setSurname(cursor.getString(2))
+        val meldez: Meldez = new Meldez(java.lang.Integer.parseInt(cursor.getString(0)),cursor.getString(1),cursor.getString(2))
+        //meldez.setId(java.lang.Integer.parseInt(cursor.getString(0)))
+        //meldez.setName(cursor.getString(1))
+        //meldez.setSurname(cursor.getString(2))
         // Adding contact to list
         shopList.add(meldez)
       } while (cursor.moveToNext());
@@ -119,7 +119,7 @@ class DBHandler(context: Context)
   }
 
   // Getting shops Count
-  def getShopsCount(): Int = {
+  def getMeldezsCount(): Int = {
     val countQuery: String = "SELECT * FROM " + TABLE_MELDEZ
     val db: SQLiteDatabase = this.getReadableDatabase
     val cursor: Cursor = db.rawQuery(countQuery, null)
@@ -129,22 +129,22 @@ class DBHandler(context: Context)
   }
 
   // Updating a shop
-  def updateShop(meldez: Meldez): Int = {
+  def updateMeldez(meldez: Meldez): Int = {
     val db: SQLiteDatabase = this.getWritableDatabase
     val values: ContentValues = new ContentValues()
-    values.put(KEY_NAME, meldez.getName)
-    values.put(KEY_SH_ADDR, meldez.getSurname)
+    values.put(KEY_NAME, meldez.name)
+    values.put(KEY_SH_ADDR, meldez.surname)
     // updating row
     db.update(TABLE_MELDEZ,
       values,
       KEY_ID + " = ?",
-      Array(String.valueOf(meldez.getId)))
+      Array(String.valueOf(meldez.id)))
   }
 
   // Deleting a shop
-  def deleteShop(meldez: Meldez): Unit = {
+  def deleteMeldez(meldez: Meldez): Unit = {
     val db: SQLiteDatabase = this.getWritableDatabase
-    db.delete(TABLE_MELDEZ, KEY_ID + " = ?", Array(String.valueOf(meldez.getId)))
+    db.delete(TABLE_MELDEZ, KEY_ID + " = ?", Array(String.valueOf(meldez.id)))
     db.close()
   }
 
