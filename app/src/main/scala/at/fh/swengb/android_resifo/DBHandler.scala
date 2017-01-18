@@ -31,7 +31,7 @@ object DBHandler {
   // Contacts table name
   private val TABLE_MELDEZ: String = "meldez"
 
-  // Shops Table Columns names
+  // Meldez Table Columns names
   private val KEY_ID: String = "id"
 
   private val KEY_NAME: String = "name"
@@ -88,13 +88,11 @@ class DBHandler(context: Context)
       null,
       null)
     if (cursor != null) cursor.moveToFirst()
-    val contact: Meldez = new Meldez(
-      java.lang.Integer.parseInt(cursor.getString(0)),
-      cursor.getString(1),
-      cursor.getString(2))
+    val entry: Meldez = new Meldez(java.lang.Integer.parseInt(cursor.getString(0)), cursor.getString(1), cursor.getString(2))
     // return shop
-    contact
+    entry
   }
+
 
   // Getting All Shops
   def getAllMeldezs(): List[Meldez] = {
