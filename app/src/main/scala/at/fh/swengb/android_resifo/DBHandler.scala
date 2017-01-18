@@ -36,7 +36,7 @@ object DBHandler {
 
   private val KEY_NAME: String = "name"
 
-  private val KEY_SH_ADDR: String = "shop_address"
+  private val KEY_SURNAME: String = "surname"
 
 }
 
@@ -44,13 +44,13 @@ class DBHandler(context: Context)
   extends SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
   override def onCreate(db: SQLiteDatabase): Unit = {
-    val CREATE_CONTACTS_TABLE: String = "CREATE TABLE " + TABLE_MELDEZ + "(" + KEY_ID + " INTEGER PRIMARY KEY," +
+    val CREATE_MELDEZ_TABLE: String = "CREATE TABLE " + TABLE_MELDEZ + "(" + KEY_ID + " INTEGER PRIMARY KEY," +
       KEY_NAME +
       " TEXT," +
-      KEY_SH_ADDR +
+      KEY_SURNAME +
       " TEXT" +
       ")"
-    db.execSQL(CREATE_CONTACTS_TABLE)
+    db.execSQL(CREATE_MELDEZ_TABLE)
   }
 
   override def onUpgrade(db: SQLiteDatabase,
@@ -69,7 +69,7 @@ class DBHandler(context: Context)
     // Shop Name
     values.put(KEY_NAME, meldez.name)
     // Shop Phone Number
-    values.put(KEY_SH_ADDR, meldez.surname)
+    values.put(KEY_SURNAME, meldez.surname)
     // Inserting Row
     db.insert(TABLE_MELDEZ, null, values)
     // Closing database connection
@@ -80,7 +80,7 @@ class DBHandler(context: Context)
   def getMeldez(id: Int): Meldez = {
     val db: SQLiteDatabase = this.getReadableDatabase
     val cursor: Cursor = db.query(TABLE_MELDEZ,
-      Array(KEY_ID, KEY_NAME, KEY_SH_ADDR),
+      Array(KEY_ID, KEY_NAME, KEY_SURNAME),
       KEY_ID + "=?",
       Array(String.valueOf(id)),
       null,
@@ -98,7 +98,7 @@ class DBHandler(context: Context)
 
   // Getting All Shops
   def getAllMeldezs(): List[Meldez] = {
-    val shopList: List[Meldez] = new ArrayList[Meldez]()
+    val meldezList: List[Meldez] = new ArrayList[Meldez]()
     // Select All Query
     val selectQuery: String = "SELECT * FROM " + TABLE_MELDEZ
     val db: SQLiteDatabase = this.getWritableDatabase
@@ -111,11 +111,11 @@ class DBHandler(context: Context)
         //meldez.setName(cursor.getString(1))
         //meldez.setSurname(cursor.getString(2))
         // Adding contact to list
-        shopList.add(meldez)
+        meldezList.add(meldez)
       } while (cursor.moveToNext());
     }
     // return contact list
-    shopList
+    meldezList
   }
 
   // Getting shops Count
@@ -133,7 +133,7 @@ class DBHandler(context: Context)
     val db: SQLiteDatabase = this.getWritableDatabase
     val values: ContentValues = new ContentValues()
     values.put(KEY_NAME, meldez.name)
-    values.put(KEY_SH_ADDR, meldez.surname)
+    values.put(KEY_SURNAME, meldez.surname)
     // updating row
     db.update(TABLE_MELDEZ,
       values,
