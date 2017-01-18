@@ -17,12 +17,12 @@ class MainActivity extends AppCompatActivity {
 
 
   }
-  def editActivity(view: View):Unit = {
-    val i = new Intent(this, classOf[EditActivity])
+  def editActivity(view: View){
+    val i: Intent = new Intent(this, classOf[EditActivity])
     startActivity(i)
   }
-  def impressumActivity(view: View):Unit={
-    val impressum = new Intent(this, classOf[InformationActivity])
+  def impressumActivity(view: View){
+    val impressum: Intent = new Intent(this, classOf[InformationActivity])
     startActivity(impressum)
   }
   def downLoad(view: View) {
@@ -30,8 +30,8 @@ class MainActivity extends AppCompatActivity {
     val urlIntent: Intent = new Intent(Intent.ACTION_VIEW, url)
     startActivity(urlIntent)
   }
-  def viewData(view: View):Unit={
-    val data = new Intent(this, classOf[OverviewActivity])
+  def viewData(view: View){
+    val data: Intent = new Intent(this, classOf[OverviewActivity])
     startActivity(data)
   }
 }

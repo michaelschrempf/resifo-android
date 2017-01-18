@@ -19,7 +19,7 @@ class MainActivityTest extends AppCompatActivity {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
 
-    val txtView: TextView = findViewById(R.id.test).asInstanceOf[TextView]
+    /*val txtView: TextView = findViewById(R.id.test).asInstanceOf[TextView]
 
 
 
@@ -43,7 +43,7 @@ class MainActivityTest extends AppCompatActivity {
 
     }*/
 
-    txtView.setText(db.getAllMeldezs().toString)
+    txtView.setText(db.getAllMeldezs().toString)*/
   }
 
 

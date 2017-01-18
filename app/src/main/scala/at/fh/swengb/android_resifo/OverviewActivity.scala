@@ -13,6 +13,9 @@ class OverviewActivity extends AppCompatActivity{
   override protected def onCreate(savedInstanceState: Bundle): Unit = {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_overview)
+
+
+
   }
   def personalEdit(view: View):Unit={
     def personEdit = new Intent(this, classOf[PersonalActivity])
