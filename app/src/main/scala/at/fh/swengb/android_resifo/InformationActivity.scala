@@ -7,15 +7,16 @@ import android.view.View
 import at.fh.swengb.resifo_android.{MainActivity, R}
 
 /**
-  * Created by Kevin on 16.01.2017.
+  * Created by Michael and Kevin but not by Sebastian on 16.01.2017.
   */
 class InformationActivity extends AppCompatActivity{
   override protected def onCreate(savedInstanceState: Bundle): Unit ={
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_information)
   }
+
   def GoBackHome(view: View):Unit={
-    val goHome = new Intent(this,classOf[MainActivity])
+    val goHome: Intent = new Intent(this,classOf[MainActivity])
     startActivity(goHome)
   }
 }
