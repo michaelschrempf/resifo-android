@@ -204,6 +204,17 @@
 
                 </RadioGroup>
 
+                <TextView
+                    android:text="ZMR -Zahl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ZMR -Zahl"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textStyle="normal|bold"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp" />
+
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
