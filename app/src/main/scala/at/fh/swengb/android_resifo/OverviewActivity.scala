@@ -17,20 +17,24 @@ class OverviewActivity extends AppCompatActivity{
     setContentView(R.layout.activity_overview)
 
     val tV_name: TextView = findViewById(R.id.tV_vorname).asInstanceOf[TextView]
-
-
-    val db: DBHandler = new DBHandler(this)
-    db.onUpgrade(db.getWritableDatabase,0,0)
-    Log.d("Insert: ", "Inserting ..")
-    db.addMeldez(new Meldez(1,"Michael","Schrempf"))
+    val tV_surname: TextView = findViewById(R.id.tV_nachname).asInstanceOf[TextView]
+    val tV_surname_before: TextView = findViewById(R.id.tV_nachnameVorher).asInstanceOf[TextView]
 
 
 
 
 
-    val name = db.getMeldez(1)
-    tV_name.setText(name.name)
-    Log.d(db.getAllMeldezs().toString,"Entries")
+
+    //db.onUpgrade(db.getWritableDatabase,0,0)
+
+
+
+
+
+
+
+
+
 
 
 
