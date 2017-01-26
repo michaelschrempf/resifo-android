@@ -12,11 +12,11 @@ import android.widget.EditText
 import at.fh.swengb.resifo_android.{MainActivity, R}
 
 class PersonalActivity extends AppCompatActivity{
-  var importData: DataBase = _
+
   override protected def onCreate(savedInstanceState: Bundle){
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_personal)
-    importData = DataBase(getApplicationContext)
+
   }
   def GoBackHomeScreen(view: View):Unit={
     val homeBack = new Intent(this,classOf[MainActivity])
@@ -28,7 +28,7 @@ class PersonalActivity extends AppCompatActivity{
   }
 
 
-  def saveToDb(view: View): Unit = {
+  /*def saveToDb(view: View): Unit = {
     val firstNameEditText = findViewById(R.id.vorname).asInstanceOf[EditText]
     val firstName: String = firstNameEditText.getText.toString
     println(firstName)
@@ -55,5 +55,5 @@ class PersonalActivity extends AppCompatActivity{
     finally {
       someCursor foreach (_.close())
     }
-  }
+  }*/
 }
