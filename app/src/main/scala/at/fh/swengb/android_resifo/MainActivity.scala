@@ -45,7 +45,6 @@ class MainActivity extends AppCompatActivity {
 
   def func_reset(view: View): Unit ={
 
-    db.onUpgrade(db.getWritableDatabase,0,0)
 
   }
 }
