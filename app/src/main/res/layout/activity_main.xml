@@ -32,6 +32,7 @@
                 android:layout_weight="1"
                 android:textSize="36sp"
                 android:textAlignment="center" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -90,6 +91,20 @@
                 android:id="@+id/button3"
                 android:layout_weight="1"
                 android:onClick="impressumActivity" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:text="Zurücksetzen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_reset"
+                android:layout_weight="1"
+                android:onClick="func_reset" />
         </LinearLayout>
 
         <ImageView
