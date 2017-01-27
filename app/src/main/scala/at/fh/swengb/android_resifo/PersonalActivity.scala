@@ -26,34 +26,4 @@ class PersonalActivity extends AppCompatActivity{
     val nextPage = new Intent(this,classOf[AnmeldungActivity])
     startActivity(nextPage)
   }
-
-
-  /*def saveToDb(view: View): Unit = {
-    val firstNameEditText = findViewById(R.id.vorname).asInstanceOf[EditText]
-    val firstName: String = firstNameEditText.getText.toString
-    println(firstName)
-    val cv = new ContentValues()
-    Map("firstname" -> firstName) foreach
-      {
-        case (k, v) => cv.put(k, v)
-      }
-    importData.getWritableDatabase().insert("person", null, cv)
-
-    var someCursor: Option[Cursor] = None
-    try {
-      someCursor = Option(importData.getReadableDatabase.query("person", Array("id", "firstname"), null, null, null, null, null))
-      someCursor match {
-        case None => System.err.println("Could not execute query due to some reason")
-        case Some(c) =>
-          while (c.moveToNext()) {
-            val id = c.getInt(c.getColumnIndex("id"))
-            val firstName = c.getString(c.getColumnIndex("firstname"))
-            println(s"ID($id) : $firstName")
-          }
-      }
-    }
-    finally {
-      someCursor foreach (_.close())
-    }
-  }*/
 }

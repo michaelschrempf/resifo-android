@@ -18,8 +18,8 @@ class AnmeldungActivity extends AppCompatActivity{
     val homeBack = new Intent(this,classOf[EditActivity])
     startActivity(homeBack)
   }
-  def GoToHauptWohnSitz(view: View):Unit={
-    val goTo = new Intent(this,classOf[HauptWohnActivity])
+  def GoToAbmeldung(view: View):Unit={
+    val goTo = new Intent(this,classOf[AbmeldungActivity])
     startActivity(goTo)
   }
 }

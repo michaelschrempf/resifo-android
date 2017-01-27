@@ -40,13 +40,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <Button
-                android:text="Daten bearbeiten"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/btn_edit"
-                android:layout_weight="1"
-                android:onClick="editActivity" />
         </LinearLayout>
 
         <LinearLayout
@@ -55,12 +48,12 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:text="Daten anschauen"
+                android:text="Daten auswählen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_view"
                 android:layout_weight="1"
-                android:onClick="viewData" />
+                android:onClick="editActivity" />
 
         </LinearLayout>
 

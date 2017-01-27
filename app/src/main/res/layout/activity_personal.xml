@@ -346,20 +346,12 @@
                     android:layout_weight="1">
 
                     <Button
-                        android:text="Home"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/button5"
-                        android:layout_weight="1"
-                        android:onClick="GoBackHomeScreen" />
-
-                    <Button
                         android:text="Weiter zur Anmeldung"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/button2"
                         android:layout_weight="1"
-                        android:onClick="saveToDb" />
+                        android:onClick="GoToAnmeldung" />
 
                 </LinearLayout>
 
