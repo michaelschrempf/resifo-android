@@ -1,17 +1,25 @@
 package at.fh.swengb.resifo_android
 
 import android.content.Intent
+import android.database.sqlite.SQLiteDatabase
 import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import at.fh.swengb.android_resifo.{EditActivity, InformationActivity, OverviewActivity}
+import at.fh.swengb.android_resifo.{DBHandler, EditActivity, InformationActivity, OverviewActivity}
+
 
 
 class MainActivity extends AppCompatActivity {
+
+  var db: DBHandler = _
+
+
   override protected def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
+
+    db = new DBHandler(this)
 
 
 
@@ -33,5 +41,10 @@ class MainActivity extends AppCompatActivity {
   def viewData(view: View){
     val data: Intent = new Intent(this, classOf[OverviewActivity])
     startActivity(data)
+  }
+
+  def func_reset(view: View): Unit ={
+
+
   }
 }
