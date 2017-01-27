@@ -6,20 +6,20 @@ import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import at.fh.swengb.android_resifo.{DBHandler, EditActivity, InformationActivity, OverviewActivity}
+import at.fh.swengb.android_resifo.{EditActivity, InformationActivity, MyListActivity, OverviewActivity}
 
 
 
 class MainActivity extends AppCompatActivity {
 
-  var db: DBHandler = _
+
 
 
   override protected def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
 
-    db = new DBHandler(this)
+
 
 
 
@@ -33,7 +33,7 @@ class MainActivity extends AppCompatActivity {
     val impressum: Intent = new Intent(this, classOf[InformationActivity])
     startActivity(impressum)
   }
-  def downLoad(view: View) {
+  def downLoad(view: View){
     val url: Uri = Uri.parse("http://www.graz.at/cms/ziel/313359/DE")
     val urlIntent: Intent = new Intent(Intent.ACTION_VIEW, url)
     startActivity(urlIntent)
@@ -43,8 +43,8 @@ class MainActivity extends AppCompatActivity {
     startActivity(data)
   }
 
-  def func_reset(view: View): Unit ={
-
-
+  def test(view: View){
+    val data: Intent = new Intent(this, classOf[MyListActivity])
+    startActivity(data)
   }
 }
