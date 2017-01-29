@@ -21,6 +21,7 @@
         <activity android:name="at.fh.swengb.android_resifo.InformationActivity"></activity>
         <activity android:name="at.fh.swengb.android_resifo.OverviewActivity"></activity>
         <activity android:name="at.fh.swengb.android_resifo.HauptWohnActivity"></activity>
+        <activity android:name="at.fh.swengb.android_resifo.MyListActivity"></activity>
     </application>
 
 </manifest>

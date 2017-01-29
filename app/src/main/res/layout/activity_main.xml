@@ -104,7 +104,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_reset"
                 android:layout_weight="1"
-                android:onClick="func_reset" />
+                android:onClick="test" />
         </LinearLayout>
 
         <ImageView
