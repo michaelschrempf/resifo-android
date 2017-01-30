@@ -41,7 +41,7 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:text="Daten bearbeiten"
+                android:text="Neuen Datensatz anlegen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_edit"
@@ -55,27 +55,12 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:text="Daten anschauen"
+                android:text="Vorhandene Daten anschauen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_view"
                 android:layout_weight="1"
                 android:onClick="viewData" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:text="Homepage der Stadt Graz"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/btn_download"
-                android:layout_weight="1"
-                android:onClick="downLoad" />
 
         </LinearLayout>
 
@@ -91,6 +76,20 @@
                 android:id="@+id/button3"
                 android:layout_weight="1"
                 android:onClick="impressumActivity" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:text="Zurücksetzen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_reset"
+                android:layout_weight="1"
+                android:onClick="test" />
         </LinearLayout>
 
         <LinearLayout

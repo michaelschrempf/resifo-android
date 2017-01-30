@@ -33,8 +33,6 @@ case class SimpleDb(context: Context) extends SQLiteOpenHelper(context, SimpleDb
   }
 
   def mkPersonDao(): SqlitePersonDao = SqlitePersonDao(getWritableDatabase)
-
-
   trait BaseDao[T] {
 
     def insert(t: T): Long
@@ -43,7 +41,6 @@ case class SimpleDb(context: Context) extends SQLiteOpenHelper(context, SimpleDb
 
     // ... and other functions
   }
-
 
   def mkContentValues(p: Person): ContentValues = {
     val cv = new ContentValues
@@ -106,7 +103,12 @@ case class SimpleDb(context: Context) extends SQLiteOpenHelper(context, SimpleDb
         "off_plz TEXT, " +
         "off_city TEXT, " +
         "off_state TEXT" +
+
+        ");")
+    }
+
         ");")}
+
 
     def init(): Unit = db.execSQL("create table person (id INTEGER PRIMARY KEY ASC, " +
       "firstname TEXT, " +
@@ -140,10 +142,17 @@ case class SimpleDb(context: Context) extends SQLiteOpenHelper(context, SimpleDb
       * @param p
       */
 
+
+    def dropTable(name: String) = {
+      db.execSQL("drop table if exists " + name)
+    }
+
+
     def dropTable(name: String) =
     {
       db.execSQL("drop table if exists " + name)
     }
+
     def insert(p: Person): Long = {
       val cv: ContentValues = mkContentValues(p)
       db.insert("person", null, cv)
@@ -199,9 +208,15 @@ case class SimpleDb(context: Context) extends SQLiteOpenHelper(context, SimpleDb
               val off_city = c.getString(c.getColumnIndex("off_city"))
               val off_state = c.getString(c.getColumnIndex("off_state"))
               lb.append(Person(firstName, secondName, secondName_before, birthDay, birthLocation,
+
+                sex, religion, familyStatus, nationality, on_street, on_streetNumber,
+                on_stair, on_door, on_plz, on_city, on_state, off_street, off_streetNumber,
+                off_stair, off_door, off_plz, off_city, off_state))
+
                 sex, religion, familyStatus, nationality,on_street,on_streetNumber,
                 on_stair,on_door,on_plz,on_city,on_state,off_street,off_streetNumber,
                 off_stair,off_door,off_plz,off_city,off_state))
+
 
             }
             lb.toList
@@ -210,6 +225,56 @@ case class SimpleDb(context: Context) extends SQLiteOpenHelper(context, SimpleDb
         someCursor foreach (_.close())
       }
 
+
+
+    }
+
+    def allEntries(): List[Person] = {
+
+      var someCursor: Option[Cursor] = None
+      someCursor = somePersonCursor()
+      someCursor match {
+        case None =>
+          System.err.println("Could not execute query due to some reason")
+          Nil
+        case Some(c) =>
+          val lb = new ListBuffer[Person]()
+          while (c.moveToNext()) {
+
+            val id = c.getInt(c.getColumnIndex("id"))
+            val firstName = c.getString(c.getColumnIndex("firstname"))
+            val secondName = c.getString(c.getColumnIndex("secondname"))
+            val secondName_before = c.getString(c.getColumnIndex("secondName_before"))
+            val birthDay = c.getString(c.getColumnIndex("birthDay"))
+            val birthLocation = c.getString(c.getColumnIndex("birthLocation"))
+            val sex = c.getString(c.getColumnIndex("sex"))
+            val religion = c.getString(c.getColumnIndex("religion"))
+            val familyStatus = c.getString(c.getColumnIndex("familyStatus"))
+            val nationality = c.getString(c.getColumnIndex("nationality"))
+            val on_street = c.getString(c.getColumnIndex("on_street"))
+            val on_streetNumber = c.getString(c.getColumnIndex("on_streetNumber"))
+            val on_stair = c.getString(c.getColumnIndex("on_stair"))
+            val on_door = c.getString(c.getColumnIndex("on_door"))
+            val on_plz = c.getString(c.getColumnIndex("on_plz"))
+            val on_city = c.getString(c.getColumnIndex("on_city"))
+            val on_state = c.getString(c.getColumnIndex("on_state"))
+            val off_street = c.getString(c.getColumnIndex("off_street"))
+            val off_streetNumber = c.getString(c.getColumnIndex("off_streetNumber"))
+            val off_stair = c.getString(c.getColumnIndex("off_stair"))
+            val off_door = c.getString(c.getColumnIndex("off_door"))
+            val off_plz = c.getString(c.getColumnIndex("off_plz"))
+            val off_city = c.getString(c.getColumnIndex("off_city"))
+            val off_state = c.getString(c.getColumnIndex("off_state"))
+            lb.append(Person(firstName, secondName, secondName_before, birthDay, birthLocation,
+              sex, religion, familyStatus, nationality, on_street, on_streetNumber,
+              on_stair, on_door, on_plz, on_city, on_state, off_street, off_streetNumber,
+              off_stair, off_door, off_plz, off_city, off_state))
+          }
+          lb.toList
+      }
+    }
+
+    def allEntriesOnlyFirstAndSecondname(): List[String] = {
 
 
 
@@ -274,7 +339,11 @@ case class SimpleDb(context: Context) extends SQLiteOpenHelper(context, SimpleDb
             val id = c.getInt(c.getColumnIndex("id"))
             val firstName = c.getString(c.getColumnIndex("firstname"))
             val secondName = c.getString(c.getColumnIndex("secondname"))
+
+            lb.append(firstName + " " + secondName)
+
             lb.append(firstName +" " + secondName)
+
           }
           lb.toList
       }
@@ -287,6 +356,25 @@ case class SimpleDb(context: Context) extends SQLiteOpenHelper(context, SimpleDb
       * @return
       */
     private def someCursorForFirstnameQuery(firstName: String): Option[Cursor] = {
+
+      Option(db.query("person", Array("id", "firstname", "secondname", "secondName_before",
+        "birthDay", "birthLocation", "sex",
+        "religion", "familyStatus", "nationality", "on_street",
+        "on_streetNumber", "on_stair", "on_door", "on_plz", "on_city",
+        "on_state", "off_street", "off_streetNumber", "off_stair", "off_door",
+        "off_plz", "off_city", "off_state"), "firstname = ?", Array(firstName), null, null, null))
+    }
+
+    private def somePersonCursor(): Option[Cursor] = {
+      Option(db.query("person", Array("id", "firstname", "secondname", "secondName_before",
+        "birthDay", "birthLocation", "sex",
+        "religion", "familyStatus", "nationality", "on_street",
+        "on_streetNumber", "on_stair", "on_door", "on_plz", "on_city",
+        "on_state", "off_street", "off_streetNumber", "off_stair", "off_door",
+        "off_plz", "off_city", "off_state"), null, null, null, null, null))
+    }
+  }
+
       Option(db.query("person", Array("id", "firstname", "secondname","secondName_before",
         "birthDay","birthLocation","sex",
         "religion","familyStatus","nationality","on_street",
@@ -303,9 +391,5 @@ case class SimpleDb(context: Context) extends SQLiteOpenHelper(context, SimpleDb
                                       "on_state","off_street","off_streetNumber","off_stair","off_door",
                                       "off_plz","off_city","off_state"), null, null, null, null, null))
     }
-
-
   }
-
-
 }

@@ -176,19 +176,12 @@
             android:layout_width="match_parent">
 
             <Button
-                android:text="Edit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/button5"
-                android:layout_weight="1"
-                android:onClick="GoBackEdit" />
-
-            <Button
-                android:text="Weiter zur Unterschrift"
+                android:text="Speichern und zurück Home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/button2"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:onClick="saveAndHome" />
         </LinearLayout>
 
     </LinearLayout>

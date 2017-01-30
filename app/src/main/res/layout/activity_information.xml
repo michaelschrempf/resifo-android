@@ -91,7 +91,8 @@ Sozialhilfe) maßgeblich."
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
                     android:id="@+id/textView13"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:typeface="normal" />
                 <TextView
                     android:text="Bedenken Sie bitte, dass eine Änderung des Hauptwohnsitzes oder eines weiteren Wohnsitzes
 auch noch weitere Mitteilungspflichten (z. B. Kfz-Zulassung) begründen kann."

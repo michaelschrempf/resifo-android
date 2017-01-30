@@ -976,10 +976,6 @@
                     android:onClick="storeData" />
 
             </LinearLayout>
-
-
-
         </LinearLayout>
     </ScrollView>
-
 </RelativeLayout>
