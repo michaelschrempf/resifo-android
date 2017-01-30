@@ -18,5 +18,8 @@ class AbmeldungActivity extends AppCompatActivity{
     val homeBack = new Intent(this,classOf[MainActivity])
     startActivity(homeBack)
   }
-
+  def goBack(view: View):Unit={
+    val goback = new Intent(this,classOf[HauptwohnsitzActivity])
+    startActivity(goback)
+  }
 }

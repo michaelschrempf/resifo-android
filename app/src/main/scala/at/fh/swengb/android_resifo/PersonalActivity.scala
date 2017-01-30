@@ -18,7 +18,7 @@ class PersonalActivity extends AppCompatActivity{
     setContentView(R.layout.activity_personal)
 
   }
-  def GoBackHomeScreen(view: View):Unit={
+  def goBack(view: View):Unit={
     val homeBack = new Intent(this,classOf[MainActivity])
     startActivity(homeBack)
   }
