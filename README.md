@@ -1,6 +1,6 @@
 # Our Readme-File
-# resifo-android - Meldezettel
-## IMA 2015 | SWENGB Projekt
+# resifo-android - Meldez
+## SWENGB Projekt
 ### Umgesetzt von: Kevin Stessel, Sebastian Wanke, Michael Schrempf und Lukas Zwatz
 
 Diese Applikation wurde im Rahmen eines Studienprojekts an der [FH Joanneum GmbH](http://fh-joanneum.at/) in der Programmiersprache Scala realisiert.
