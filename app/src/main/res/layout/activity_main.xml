@@ -40,6 +40,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <Button
+                android:text="Neuen Datensatz anlegen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_edit"
+                android:layout_weight="1"
+                android:onClick="editActivity" />
         </LinearLayout>
 
         <LinearLayout
@@ -48,27 +55,12 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:text="Daten auswählen"
+                android:text="Vorhandene Daten anschauen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_view"
                 android:layout_weight="1"
-                android:onClick="editActivity" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:text="Homepage der Stadt Graz"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/btn_download"
-                android:layout_weight="1"
-                android:onClick="downLoad" />
+                android:onClick="viewData" />
 
         </LinearLayout>
 
@@ -97,7 +89,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_reset"
                 android:layout_weight="1"
-                android:onClick="func_reset" />
+                android:onClick="test" />
         </LinearLayout>
 
         <ImageView

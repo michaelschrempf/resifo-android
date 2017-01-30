@@ -204,16 +204,6 @@
 
                 </RadioGroup>
 
-                <TextView
-                    android:text="ZMR -Zahl"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:textAlignment="center"
-                    android:textStyle="normal|bold"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="18sp" />
-
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -351,7 +341,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/button2"
                         android:layout_weight="1"
-                        android:onClick="GoToAnmeldung" />
+                        android:onClick="saveToDb" />
 
                 </LinearLayout>
 

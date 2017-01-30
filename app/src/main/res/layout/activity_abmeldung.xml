@@ -174,13 +174,13 @@
             android:orientation="horizontal"
             android:layout_height="wrap_content"
             android:layout_width="match_parent">
+
             <Button
-                android:text="Save and go Home"
+                android:text="Speichern und zurück Home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/button2"
-                android:layout_weight="1"
-                android:onClick="GoBackHome"/>
+                android:layout_weight="1" />
         </LinearLayout>
 
     </LinearLayout>
