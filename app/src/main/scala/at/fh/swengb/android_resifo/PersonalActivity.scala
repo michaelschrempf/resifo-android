@@ -22,7 +22,7 @@ class PersonalActivity extends AppCompatActivity{
     val homeBack = new Intent(this,classOf[MainActivity])
     startActivity(homeBack)
   }
-  def GoToAnmeldung(view: View):Unit={
+  def nextAnmeldung(view: View):Unit={
     val nextPage = new Intent(this,classOf[AnmeldungActivity])
     startActivity(nextPage)
   }

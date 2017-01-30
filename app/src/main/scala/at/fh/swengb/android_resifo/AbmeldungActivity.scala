@@ -14,7 +14,7 @@ class AbmeldungActivity extends AppCompatActivity{
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_abmeldung)
   }
-  def GoBackHome(view: View):Unit={
+  def saveAndHome(view: View):Unit={
     val homeBack = new Intent(this,classOf[MainActivity])
     startActivity(homeBack)
   }
