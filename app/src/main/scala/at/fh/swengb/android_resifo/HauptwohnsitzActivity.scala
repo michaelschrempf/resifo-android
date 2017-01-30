@@ -7,15 +7,16 @@ import android.view.View
 import at.fh.swengb.resifo_android.{MainActivity, R}
 
 /**
-  * Created by Kevin on 14.01.2017.
+  * Created by Kevin on 30.01.2017.
   */
-class AnmeldungActivity extends AppCompatActivity{
+class HauptwohnsitzActivity extends AppCompatActivity{
   override protected def onCreate(savedInstanceState: Bundle): Unit ={
-    super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_anmeldung)
-  }
-  def nextHauptWohnSitz(view: View):Unit={
-    val goTo = new Intent(this,classOf[HauptwohnsitzActivity])
+  super.onCreate(savedInstanceState)
+  setContentView(R.layout.activity_abmeldung)
+}
+  def nextAbmeldung(view: View):Unit={
+    val goTo = new Intent(this,classOf[AbmeldungActivity])
     startActivity(goTo)
   }
+
 }

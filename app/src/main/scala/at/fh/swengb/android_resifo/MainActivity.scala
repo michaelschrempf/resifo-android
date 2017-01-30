@@ -29,6 +29,6 @@ class MainActivity extends AppCompatActivity {
   def test(view: View){
     val aDb: SimpleDb = SimpleDb(getApplicationContext)
     aDb.mkPersonDao().dropAndInitTable()
-    for(i <- 1 to 200) aDb.mkPersonDao().insert(Person.mkRandom)
+    for(i <- 1 to 100) aDb.mkPersonDao().insert(Person.mkRandom)
   }
 }
