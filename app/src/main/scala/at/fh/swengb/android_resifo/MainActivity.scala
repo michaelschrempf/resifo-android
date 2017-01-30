@@ -6,7 +6,7 @@ import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import at.fh.swengb.android_resifo.{EditActivity, InformationActivity, MyListActivity, OverviewActivity}
+import at.fh.swengb.android_resifo._
 
 
 
@@ -15,12 +15,11 @@ class MainActivity extends AppCompatActivity {
 
 
 
+
+
   override protected def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
-
-
-
 
 
 
@@ -39,12 +38,19 @@ class MainActivity extends AppCompatActivity {
     startActivity(urlIntent)
   }
   def viewData(view: View){
-    val data: Intent = new Intent(this, classOf[OverviewActivity])
+    val data: Intent = new Intent(this, classOf[MyListActivity])
     startActivity(data)
   }
 
   def test(view: View){
-    val data: Intent = new Intent(this, classOf[MyListActivity])
-    startActivity(data)
+
+    val aDb: SimpleDb = SimpleDb(getApplicationContext)
+    aDb.mkPersonDao().dropAndInitTable()
+    for(i <- 1 to 200) aDb.mkPersonDao().insert(Person.mkRandom)
+
+
+
+
+
   }
 }
