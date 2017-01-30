@@ -18,4 +18,8 @@ class AnmeldungActivity extends AppCompatActivity{
     val goTo = new Intent(this,classOf[HauptwohnsitzActivity])
     startActivity(goTo)
   }
+  def goBack(view: View):Unit={
+    val goBack = new Intent(this,classOf[PersonalActivity])
+    startActivity(goBack)
+  }
 }

@@ -12,11 +12,15 @@ import at.fh.swengb.resifo_android.{MainActivity, R}
 class HauptwohnsitzActivity extends AppCompatActivity{
   override protected def onCreate(savedInstanceState: Bundle): Unit ={
   super.onCreate(savedInstanceState)
-  setContentView(R.layout.activity_abmeldung)
+  setContentView(R.layout.activity_hauptwohn)
 }
   def nextAbmeldung(view: View):Unit={
     val goTo = new Intent(this,classOf[AbmeldungActivity])
     startActivity(goTo)
+  }
+  def goBack(view: View):Unit={
+    val goBack = new Intent(this,classOf[AnmeldungActivity])
+    startActivity(goBack)
   }
 
 }
