@@ -31,15 +31,10 @@ class MainActivity extends AppCompatActivity {
     val data: Intent = new Intent(this, classOf[MyListActivity])
     startActivity(data)
   }
-  def test(view: View){
+  def test(view: View) {
     val aDb: SimpleDb = SimpleDb(getApplicationContext)
     aDb.mkPersonDao().dropAndInitTable()
-    for(i <- 1 to 100) aDb.mkPersonDao().insert(Person.mkRandom)
-
-  def test(view: View){
-
-    val aDb: SimpleDb = SimpleDb(getApplicationContext)
-    aDb.mkPersonDao().dropAndInitTable()
-    for(i <- 1 to 200) aDb.mkPersonDao().insert(Person.mkRandom)
+    for (i <- 1 to 100) aDb.mkPersonDao().insert(Person.mkRandom)
   }
+
 }
