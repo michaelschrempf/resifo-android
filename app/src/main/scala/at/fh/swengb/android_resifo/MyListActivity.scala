@@ -7,6 +7,10 @@ import android.view.View
 import android.widget.{ArrayAdapter, ListView}
 
 import scala.collection.JavaConversions._
+
+/**
+  * Created by Michael on 19/01/2017.
+  */
 class MyListActivity extends ListActivity {
 
   var aDb: SimpleDb = _
@@ -18,10 +22,6 @@ class MyListActivity extends ListActivity {
 
 
     val persons: List[String] = aDb.mkPersonDao().allEntriesOnlyFirstAndSecondname()
-
-    val pA = new ArrayAdapter[String](this, android.R.layout.simple_list_item_1, persons)
-    setListAdapter(pA)
-
     //val persons2: List[Person] = aDb.mkPersonDao().allEntries()
 
     //val ps : List[Person] = List(Person("aaa","b"))
@@ -29,6 +29,8 @@ class MyListActivity extends ListActivity {
     val pA = new ArrayAdapter[String](this, android.R.layout.simple_list_item_1, persons)
 
     setListAdapter(pA)
+
+
   }
 
   override def onListItemClick(l: ListView, v: View, pos: Int, i: Long) {
