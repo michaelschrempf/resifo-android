@@ -63,6 +63,16 @@ case class SimpleDb(context: Context) extends SQLiteOpenHelper(context, SimpleDb
     cv.put("on_plz", p.on_plz)
     cv.put("on_city", p.on_city)
     cv.put("on_state", p.on_state)
+    cv.put("on_foreign", p.on_foreign)
+    cv.put("on_main", p.on_main)
+    cv.put("on_owner", p.on_owner)
+    cv.put("main_street", p.main_street)
+    cv.put("main_streetNumber", p.main_streetNumber)
+    cv.put("main_stair", p.main_stair)
+    cv.put("main_door", p.main_door)
+    cv.put("main_plz", p.main_plz)
+    cv.put("main_city", p.main_city)
+    cv.put("main_state", p.main_state)
     cv.put("off_street", p.off_street)
     cv.put("off_streetNumber", p.off_streetNumber)
     cv.put("off_stair", p.off_stair)
@@ -70,6 +80,7 @@ case class SimpleDb(context: Context) extends SQLiteOpenHelper(context, SimpleDb
     cv.put("off_plz", p.off_plz)
     cv.put("off_city", p.off_city)
     cv.put("off_state", p.off_state)
+    cv.put("off_foreign", p.off_foreign)
     cv
   }
 
@@ -99,13 +110,24 @@ case class SimpleDb(context: Context) extends SQLiteOpenHelper(context, SimpleDb
         "on_plz TEXT, " +
         "on_city TEXT, " +
         "on_state TEXT, " +
+        "on_foreign TEXT, " +
+        "on_main TEXT, " +
+        "on_owner TEXT, " +
+        "main_street TEXT, " +
+        "main_streetNumber TEXT, " +
+        "main_stair TEXT, " +
+        "main_door TEXT, " +
+        "main_plz TEXT, " +
+        "main_city TEXT, " +
+        "main_state TEXT, " +
         "off_street TEXT, " +
         "off_streetNumber TEXT, " +
         "off_stair TEXT, " +
         "off_door TEXT, " +
         "off_plz TEXT, " +
         "off_city TEXT, " +
-        "off_state TEXT" +
+        "off_state TEXT, " +
+        "off_foreign TEXT" +
         ");")}
 
     def init(): Unit = db.execSQL("create table person (id INTEGER PRIMARY KEY ASC, " +
@@ -125,13 +147,24 @@ case class SimpleDb(context: Context) extends SQLiteOpenHelper(context, SimpleDb
       "on_plz TEXT, " +
       "on_city TEXT, " +
       "on_state TEXT, " +
+      "on_foreign TEXT, " +
+      "on_main TEXT, " +
+      "on_owner TEXT, " +
+      "main_street TEXT, " +
+      "main_streetNumber TEXT, " +
+      "main_stair TEXT, " +
+      "main_door TEXT, " +
+      "main_plz TEXT, " +
+      "main_city TEXT, " +
+      "main_state TEXT, " +
       "off_street TEXT, " +
       "off_streetNumber TEXT, " +
       "off_stair TEXT, " +
       "off_door TEXT, " +
       "off_plz TEXT, " +
       "off_city TEXT, " +
-      "off_state TEXT" +
+      "off_state TEXT, " +
+      "off_foreign TEXT" +
       ");")
 
     /**
@@ -191,6 +224,16 @@ case class SimpleDb(context: Context) extends SQLiteOpenHelper(context, SimpleDb
               val on_plz = c.getString(c.getColumnIndex("on_plz"))
               val on_city = c.getString(c.getColumnIndex("on_city"))
               val on_state = c.getString(c.getColumnIndex("on_state"))
+              val on_foreign = c.getString(c.getColumnIndex("on_foreign"))
+              val on_main = c.getString(c.getColumnIndex("on_main"))
+              val on_owner = c.getString(c.getColumnIndex("on_owner"))
+              val main_street = c.getString(c.getColumnIndex("main_street"))
+              val main_streetNumber = c.getString(c.getColumnIndex("main_streetNumber"))
+              val main_stair = c.getString(c.getColumnIndex("main_stair"))
+              val main_door = c.getString(c.getColumnIndex("main_door"))
+              val main_plz = c.getString(c.getColumnIndex("main_plz"))
+              val main_city = c.getString(c.getColumnIndex("main_city"))
+              val main_state = c.getString(c.getColumnIndex("main_state"))
               val off_street = c.getString(c.getColumnIndex("off_street"))
               val off_streetNumber = c.getString(c.getColumnIndex("off_streetNumber"))
               val off_stair = c.getString(c.getColumnIndex("off_stair"))
@@ -198,10 +241,12 @@ case class SimpleDb(context: Context) extends SQLiteOpenHelper(context, SimpleDb
               val off_plz = c.getString(c.getColumnIndex("off_plz"))
               val off_city = c.getString(c.getColumnIndex("off_city"))
               val off_state = c.getString(c.getColumnIndex("off_state"))
+              val off_foreign = c.getString(c.getColumnIndex("off_foreign"))
               lb.append(Person(firstName, secondName, secondName_before, birthDay, birthLocation,
                 sex, religion, familyStatus, nationality,on_street,on_streetNumber,
-                on_stair,on_door,on_plz,on_city,on_state,off_street,off_streetNumber,
-                off_stair,off_door,off_plz,off_city,off_state))
+                on_stair,on_door,on_plz,on_city,on_state,on_foreign,on_main,on_owner,main_street,main_streetNumber,
+                main_stair,main_door,main_plz,main_city,main_state,off_street,off_streetNumber,
+                off_stair,off_door,off_plz,off_city,off_state,off_foreign))
 
             }
             lb.toList
@@ -245,6 +290,16 @@ case class SimpleDb(context: Context) extends SQLiteOpenHelper(context, SimpleDb
             val on_plz = c.getString(c.getColumnIndex("on_plz"))
             val on_city = c.getString(c.getColumnIndex("on_city"))
             val on_state = c.getString(c.getColumnIndex("on_state"))
+            val on_foreign = c.getString(c.getColumnIndex("on_foreign"))
+            val on_main = c.getString(c.getColumnIndex("on_main"))
+            val on_owner = c.getString(c.getColumnIndex("on_owner"))
+            val main_street = c.getString(c.getColumnIndex("main_street"))
+            val main_streetNumber = c.getString(c.getColumnIndex("main_streetNumber"))
+            val main_stair = c.getString(c.getColumnIndex("main_stair"))
+            val main_door = c.getString(c.getColumnIndex("main_door"))
+            val main_plz = c.getString(c.getColumnIndex("main_plz"))
+            val main_city = c.getString(c.getColumnIndex("main_city"))
+            val main_state = c.getString(c.getColumnIndex("main_state"))
             val off_street = c.getString(c.getColumnIndex("off_street"))
             val off_streetNumber = c.getString(c.getColumnIndex("off_streetNumber"))
             val off_stair = c.getString(c.getColumnIndex("off_stair"))
@@ -252,10 +307,13 @@ case class SimpleDb(context: Context) extends SQLiteOpenHelper(context, SimpleDb
             val off_plz = c.getString(c.getColumnIndex("off_plz"))
             val off_city = c.getString(c.getColumnIndex("off_city"))
             val off_state = c.getString(c.getColumnIndex("off_state"))
+            val off_foreign = c.getString(c.getColumnIndex("off_foreign"))
             lb.append(Person(firstName, secondName, secondName_before, birthDay, birthLocation,
               sex, religion, familyStatus, nationality,on_street,on_streetNumber,
-              on_stair,on_door,on_plz,on_city,on_state,off_street,off_streetNumber,
-              off_stair,off_door,off_plz,off_city,off_state))
+              on_stair,on_door,on_plz,on_city,on_state,on_foreign,on_main,on_owner,main_street,main_streetNumber,
+              main_stair,main_door,main_plz,main_city,main_state,off_street,off_streetNumber,
+              off_stair,off_door,off_plz,off_city,off_state,off_foreign))
+
           }
           lb.toList
       }
@@ -291,8 +349,10 @@ case class SimpleDb(context: Context) extends SQLiteOpenHelper(context, SimpleDb
         "birthDay","birthLocation","sex",
         "religion","familyStatus","nationality","on_street",
         "on_streetNumber","on_stair","on_door","on_plz","on_city",
-        "on_state","off_street","off_streetNumber","off_stair","off_door",
-        "off_plz","off_city","off_state"), "firstname = ?", Array(firstName), null, null, null))
+        "on_state","on_foreign","on_main","on_owner","main_street",
+        "main_streetNumber","main_stair","main_door","main_plz","main_city",
+        "main_state","off_street","off_streetNumber","off_stair","off_door",
+        "off_plz","off_city","off_state","off_foreign"), "firstname = ?", Array(firstName), null, null, null))
     }
 
     private def somePersonCursor(): Option[Cursor] = {
@@ -300,8 +360,10 @@ case class SimpleDb(context: Context) extends SQLiteOpenHelper(context, SimpleDb
         "birthDay","birthLocation","sex",
         "religion","familyStatus","nationality","on_street",
         "on_streetNumber","on_stair","on_door","on_plz","on_city",
-        "on_state","off_street","off_streetNumber","off_stair","off_door",
-        "off_plz","off_city","off_state"), null, null, null, null, null))
+        "on_state","on_foreign","on_main","on_owner","main_street",
+        "main_streetNumber","main_stair","main_door","main_plz","main_city",
+        "main_state","off_street","off_streetNumber","off_stair","off_door",
+        "off_plz","off_city","off_state","off_foreign"), null, null, null, null, null))
     }
 
 

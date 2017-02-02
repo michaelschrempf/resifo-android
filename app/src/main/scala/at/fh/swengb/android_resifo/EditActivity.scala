@@ -12,6 +12,9 @@ class EditActivity extends AppCompatActivity{
   override protected def onCreate(savedInstanceState: Bundle): Unit ={
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_edit)
+
+
+
   }
   def EditPersonal(view: View):Unit= {
     val editPerson = new Intent(this, classOf[PersonalActivity])
