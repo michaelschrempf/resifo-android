@@ -56,6 +56,11 @@ case class SimpleDb(context: Context) extends SQLiteOpenHelper(context, SimpleDb
     cv.put("religion", p.religion)
     cv.put("nationality", p.nationality)
     cv.put("sex", p.sex)
+    cv.put("zmr", p.zmr)
+    cv.put("passport", p.passport)
+    cv.put("passport_number", p.passport_number)
+    cv.put("date_passport", p.date_passport)
+    cv.put("authority", p.authority)
     cv.put("on_street", p.on_street)
     cv.put("on_streetNumber", p.on_streetNumber)
     cv.put("on_stair", p.on_stair)
@@ -103,6 +108,11 @@ case class SimpleDb(context: Context) extends SQLiteOpenHelper(context, SimpleDb
         "religion TEXT, " +
         "familyStatus TEXT, " +
         "nationality TEXT, " +
+        "zmr TEXT, " +
+        "passport TEXT, " +
+        "passport_number TEXT, " +
+        "date_passport TEXT, " +
+        "authority TEXT, " +
         "on_street TEXT, " +
         "on_streetNumber TEXT, " +
         "on_stair TEXT, " +
@@ -140,6 +150,11 @@ case class SimpleDb(context: Context) extends SQLiteOpenHelper(context, SimpleDb
       "religion TEXT, " +
       "familyStatus TEXT, " +
       "nationality TEXT, " +
+      "zmr TEXT, " +
+      "passport TEXT, " +
+      "passport_number TEXT, " +
+      "date_passport TEXT, " +
+      "authority TEXT, " +
       "on_street TEXT, " +
       "on_streetNumber TEXT, " +
       "on_stair TEXT, " +
@@ -217,6 +232,11 @@ case class SimpleDb(context: Context) extends SQLiteOpenHelper(context, SimpleDb
               val religion = c.getString(c.getColumnIndex("religion"))
               val familyStatus = c.getString(c.getColumnIndex("familyStatus"))
               val nationality = c.getString(c.getColumnIndex("nationality"))
+              val zmr = c.getString(c.getColumnIndex("zmr"))
+              val passport = c.getString(c.getColumnIndex("passport"))
+              val passport_number = c.getString(c.getColumnIndex("passport_number"))
+              val date_passport = c.getString(c.getColumnIndex("date_passport"))
+              val authority = c.getString(c.getColumnIndex("authority"))
               val on_street = c.getString(c.getColumnIndex("on_street"))
               val on_streetNumber = c.getString(c.getColumnIndex("on_streetNumber"))
               val on_stair = c.getString(c.getColumnIndex("on_stair"))
@@ -243,7 +263,7 @@ case class SimpleDb(context: Context) extends SQLiteOpenHelper(context, SimpleDb
               val off_state = c.getString(c.getColumnIndex("off_state"))
               val off_foreign = c.getString(c.getColumnIndex("off_foreign"))
               lb.append(Person(firstName, secondName, secondName_before, birthDay, birthLocation,
-                sex, religion, familyStatus, nationality,on_street,on_streetNumber,
+                sex, religion, familyStatus, nationality,zmr, passport,passport_number, date_passport, authority,on_street,on_streetNumber,
                 on_stair,on_door,on_plz,on_city,on_state,on_foreign,on_main,on_owner,main_street,main_streetNumber,
                 main_stair,main_door,main_plz,main_city,main_state,off_street,off_streetNumber,
                 off_stair,off_door,off_plz,off_city,off_state,off_foreign))
@@ -283,6 +303,11 @@ case class SimpleDb(context: Context) extends SQLiteOpenHelper(context, SimpleDb
             val religion = c.getString(c.getColumnIndex("religion"))
             val familyStatus = c.getString(c.getColumnIndex("familyStatus"))
             val nationality = c.getString(c.getColumnIndex("nationality"))
+            val zmr = c.getString(c.getColumnIndex("zmr"))
+            val passport = c.getString(c.getColumnIndex("passport"))
+            val passport_number = c.getString(c.getColumnIndex("passport_number"))
+            val date_passport = c.getString(c.getColumnIndex("date_passport"))
+            val authority = c.getString(c.getColumnIndex("authority"))
             val on_street = c.getString(c.getColumnIndex("on_street"))
             val on_streetNumber = c.getString(c.getColumnIndex("on_streetNumber"))
             val on_stair = c.getString(c.getColumnIndex("on_stair"))
@@ -309,7 +334,7 @@ case class SimpleDb(context: Context) extends SQLiteOpenHelper(context, SimpleDb
             val off_state = c.getString(c.getColumnIndex("off_state"))
             val off_foreign = c.getString(c.getColumnIndex("off_foreign"))
             lb.append(Person(firstName, secondName, secondName_before, birthDay, birthLocation,
-              sex, religion, familyStatus, nationality,on_street,on_streetNumber,
+              sex, religion, familyStatus, nationality,zmr, passport,passport_number, date_passport, authority,on_street,on_streetNumber,
               on_stair,on_door,on_plz,on_city,on_state,on_foreign,on_main,on_owner,main_street,main_streetNumber,
               main_stair,main_door,main_plz,main_city,main_state,off_street,off_streetNumber,
               off_stair,off_door,off_plz,off_city,off_state,off_foreign))
@@ -347,7 +372,7 @@ case class SimpleDb(context: Context) extends SQLiteOpenHelper(context, SimpleDb
     private def someCursorForFirstnameQuery(firstName: String): Option[Cursor] = {
       Option(db.query("person", Array("id", "firstname", "secondname","secondName_before",
         "birthDay","birthLocation","sex",
-        "religion","familyStatus","nationality","on_street",
+        "religion","familyStatus","nationality","zmr"," passport","passport_number"," date_passport"," authority","on_street",
         "on_streetNumber","on_stair","on_door","on_plz","on_city",
         "on_state","on_foreign","on_main","on_owner","main_street",
         "main_streetNumber","main_stair","main_door","main_plz","main_city",
@@ -358,7 +383,7 @@ case class SimpleDb(context: Context) extends SQLiteOpenHelper(context, SimpleDb
     private def somePersonCursor(): Option[Cursor] = {
       Option(db.query("person", Array("id", "firstname", "secondname","secondName_before",
         "birthDay","birthLocation","sex",
-        "religion","familyStatus","nationality","on_street",
+        "religion","familyStatus","nationality","zmr"," passport","passport_number"," date_passport"," authority","on_street",
         "on_streetNumber","on_stair","on_door","on_plz","on_city",
         "on_state","on_foreign","on_main","on_owner","main_street",
         "main_streetNumber","main_stair","main_door","main_plz","main_city",

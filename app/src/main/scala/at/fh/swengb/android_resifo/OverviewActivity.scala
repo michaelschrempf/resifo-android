@@ -41,6 +41,10 @@ class OverviewActivity extends AppCompatActivity{
     val religion: TextView = findViewById(R.id.tV_religion).asInstanceOf[TextView]
     val familyStatus: TextView = findViewById(R.id.tV_familienstand).asInstanceOf[TextView]
     val nationality: TextView = findViewById(R.id.tV_staat).asInstanceOf[TextView]
+    val zmr: TextView = findViewById(R.id.tV_zmr).asInstanceOf[TextView]
+    val passport: TextView = findViewById(R.id.tV_reiseDoku).asInstanceOf[TextView]
+    val date_passport: TextView = findViewById(R.id.tV_datumDoku).asInstanceOf[TextView]
+    val authority: TextView = findViewById(R.id.tV_behoerde).asInstanceOf[TextView]
     val on_street: TextView = findViewById(R.id.tV_anStraße).asInstanceOf[TextView]
     val on_streetNumber: TextView = findViewById(R.id.tV_anHausNr).asInstanceOf[TextView]
     val on_stair: TextView = findViewById(R.id.tV_anStiege).asInstanceOf[TextView]
@@ -54,7 +58,7 @@ class OverviewActivity extends AppCompatActivity{
     val main_street: TextView = findViewById(R.id.tV_hwsStraße).asInstanceOf[TextView]
     val main_streetNumber: TextView = findViewById(R.id.tV_hwsHausNr).asInstanceOf[TextView]
     val main_stair: TextView = findViewById(R.id.tV_hwsStiege).asInstanceOf[TextView]
-    val main_door: TextView = findViewById(R.id.tV_abTuer).asInstanceOf[TextView]
+    val main_door: TextView = findViewById(R.id.tV_hwsTuer).asInstanceOf[TextView]
     val main_plz: TextView = findViewById(R.id.tV_hwsPLZ).asInstanceOf[TextView]
     val main_city: TextView = findViewById(R.id.tV_hwsOrt).asInstanceOf[TextView]
     val main_state: TextView = findViewById(R.id.tV_hwsBundesland).asInstanceOf[TextView]
@@ -77,6 +81,10 @@ class OverviewActivity extends AppCompatActivity{
     religion.setText(person.religion)
     familyStatus.setText(person.familyStatus)
     nationality.setText(person.nationality)
+    zmr.setText(person.zmr)
+    passport.setText(person.passport)
+    date_passport.setText(person.date_passport)
+    authority.setText(person.authority)
     on_street.setText(person.on_street)
     on_streetNumber.setText(person.on_streetNumber)
     on_stair.setText(person.on_stair)

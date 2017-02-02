@@ -16,6 +16,9 @@ class PersonalActivity extends AppCompatActivity{
   override protected def onCreate(savedInstanceState: Bundle){
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_personal)
+
+
+
   }
   def goBack(view: View):Unit={
     val homeBack = new Intent(this,classOf[MainActivity])
