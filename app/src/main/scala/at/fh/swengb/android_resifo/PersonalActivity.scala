@@ -8,7 +8,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.Editable
 import android.view.View
-import android.widget.EditText
+import android.widget.{EditText, TextView}
 import at.fh.swengb.resifo_android.{MainActivity, R}
 
 class PersonalActivity extends AppCompatActivity{
@@ -16,9 +16,6 @@ class PersonalActivity extends AppCompatActivity{
   override protected def onCreate(savedInstanceState: Bundle){
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_personal)
-
-
-
   }
   def goBack(view: View):Unit={
     val homeBack = new Intent(this,classOf[MainActivity])
