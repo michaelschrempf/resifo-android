@@ -49,7 +49,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/editText"
+                    android:id="@+id/eTstrasseAn"
                     android:layout_weight="1"
                     android:textSize="18sp"
                     android:hint="Straße" />
@@ -65,7 +65,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="date"
                     android:ems="10"
-                    android:id="@+id/editText16"
+                    android:id="@+id/eTHausNrAn"
                     android:layout_weight="1"
                     android:textSize="18sp"
                     android:hint="Haus Nr." />
@@ -75,7 +75,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="date"
                     android:ems="10"
-                    android:id="@+id/editText17"
+                    android:id="@+id/eTStiegeAn"
                     android:layout_weight="1"
                     android:textSize="18sp"
                     android:hint="Stiege" />
@@ -85,7 +85,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="date"
                     android:ems="10"
-                    android:id="@+id/editText15"
+                    android:id="@+id/eTTuerAn"
                     android:layout_weight="1"
                     android:textSize="18sp"
                     android:hint="Tür Nr." />
@@ -101,7 +101,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/editText19"
+                    android:id="@+id/eTGemeindeAn"
                     android:layout_weight="1"
                     android:hint="Ortsgemeinde" />
 
@@ -110,7 +110,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="number"
                     android:ems="10"
-                    android:id="@+id/editText18"
+                    android:id="@+id/eTPlzAn"
                     android:layout_weight="1"
                     android:hint="Postleitzahl" />
             </LinearLayout>
@@ -146,14 +146,13 @@
                         android:text="Nein"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/radioButton2"
-                        android:layout_weight="1" />
+                        android:id="@+id/rBNeinAn" />
 
                     <RadioButton
                         android:text="Ja"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/radioButton"
+                        android:id="@+id/rBJaAn"
                         android:layout_weight="1" />
 
                 </RadioGroup>
@@ -163,7 +162,7 @@
                     android:layout_height="match_parent"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/editText20"
+                    android:id="@+id/eTStaatAn"
                     android:layout_weight="1"
                     android:hint="Angabe des Staates" />
 
@@ -179,7 +178,7 @@
                     android:text="zurück"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button6"
+                    android:id="@+id/btnBackAn"
                     android:layout_weight="1"
                     android:onClick="goBack" />
 
@@ -187,7 +186,7 @@
                     android:text="Weiter zum Hauptwohnsitz"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button2"
+                    android:id="@+id/btnweiterHauptAn"
                     android:layout_weight="1"
                     android:onClick="nextHauptWohnSitz" />
             </LinearLayout>

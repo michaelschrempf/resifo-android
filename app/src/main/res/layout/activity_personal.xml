@@ -43,7 +43,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/nachname"
+                    android:id="@+id/eTNachNamePer"
                     android:layout_weight="1"
                     android:textSize="14sp"
                     android:hint="Familienname + Titel" />
@@ -53,7 +53,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/vorname"
+                    android:id="@+id/eTVorNamePers"
                     android:layout_weight="1"
                     android:textSize="14sp"
                     android:hint="Vorname" />
@@ -63,7 +63,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/nachnameVor"
+                    android:id="@+id/eTNachNameVorPer"
                     android:layout_weight="1"
                     android:textSize="14sp"
                     android:hint="Familienname vor der ersten Eheschließung" />
@@ -73,7 +73,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="date"
                     android:ems="10"
-                    android:id="@+id/geburtstag"
+                    android:id="@+id/geburtstagPers"
                     android:layout_weight="1"
                     android:textSize="14sp"
                     android:hint="Geburtstag" />
@@ -83,7 +83,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/religion"
+                    android:id="@+id/eTReligionPers"
                     android:layout_weight="1"
                     android:textSize="14sp"
                     android:hint="Religionsbekenntnis" />
@@ -114,14 +114,14 @@
                             android:text="weiblich"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/radioButton6"
+                            android:id="@+id/rBweiblichPers"
                             android:layout_weight="1" />
 
                         <RadioButton
                             android:text="männlich"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/radioButton8"
+                            android:id="@+id/rBmannPers"
                             android:layout_weight="1"
                             android:duplicateParentState="false"
                             android:checked="false" />
@@ -150,56 +150,56 @@
                         android:text="eingetragene Partnerschaft lebend"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/radioButton27"
+                        android:id="@+id/rBPartnerPers"
                         android:layout_weight="1" />
 
                     <RadioButton
                         android:text="geschieden"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/radioButton24"
+                        android:id="@+id/rBgeschiedenPers"
                         android:layout_weight="1" />
 
                     <RadioButton
                         android:text="verwitwet"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:id="@+id/radioButton23"
+                        android:id="@+id/rBverwitwetPers"
                         android:layout_weight="1" />
 
                     <RadioButton
                         android:text="verheiratet"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/radioButton25"
+                        android:id="@+id/rBverheiratetPers"
                         android:layout_weight="1" />
 
                     <RadioButton
                         android:text="ledig"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/radioButton26"
+                        android:id="@+id/rBledigPers"
                         android:layout_weight="1" />
 
                     <RadioButton
                         android:text="Ehe aufgehoben (nichtig)"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/radioButton14"
+                        android:id="@+id/rBeheNichtigPers"
                         android:layout_weight="1" />
 
                     <RadioButton
                         android:text="hinterbliebener eingetragener Partner"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/radioButton13"
+                        android:id="@+id/rBhintereingePartPers"
                         android:layout_weight="1" />
 
                     <RadioButton
                         android:text="eingetragene Partnerschaft ausgelöst (nichtig)"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/radioButton12"
+                        android:id="@+id/rBPartnerNichtigPers"
                         android:layout_weight="1" />
 
                 </RadioGroup>
@@ -209,7 +209,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/editText"
+                    android:id="@+id/eTzmrZahlPers"
                     android:layout_weight="1"
                     android:textSize="14sp"
                     android:hint="Angabe der ZMR-Zahl (soweit bekannt)" />
@@ -230,7 +230,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/editText11"
+                    android:id="@+id/eTgeburtsOrtPers"
                     android:layout_weight="1"
                     android:hint="Geburtsort" />
 
@@ -250,7 +250,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/editText6"
+                    android:id="@+id/eTArtDokuPers"
                     android:layout_weight="1"
                     android:hint="Art, z.B.: Reisepass" />
 
@@ -259,7 +259,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="number"
                     android:ems="10"
-                    android:id="@+id/editText7"
+                    android:id="@+id/eTNrPers"
                     android:layout_weight="1"
                     android:hint="Nummer" />
 
@@ -268,7 +268,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="date"
                     android:ems="10"
-                    android:id="@+id/editText8"
+                    android:id="@+id/eTausDatumPers"
                     android:layout_weight="1"
                     android:hint="Ausstellungsdatum" />
 
@@ -277,7 +277,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/editText9"
+                    android:id="@+id/eTbehoerdePers"
                     android:layout_weight="1"
                     android:hint="Ausstellende Behörde" />
 
@@ -307,14 +307,14 @@
                             android:text="Österreich"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:id="@+id/radioButton32"
+                            android:id="@+id/rBAustriaPers"
                             android:layout_weight="1" />
 
                         <RadioButton
                             android:text="anderer Staat"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:id="@+id/radioButton31"
+                            android:id="@+id/rBanStaatPers"
                             android:layout_weight="1" />
                     </RadioGroup>
 
@@ -325,7 +325,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/editText10"
+                    android:id="@+id/eTandererStaatPers"
                     android:layout_weight="1"
                     android:hint="Name des Staates" />
 

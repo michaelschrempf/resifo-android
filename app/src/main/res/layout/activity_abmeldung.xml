@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:ems="10"
-                android:id="@+id/editText"
+                android:id="@+id/et_strasseAb"
                 android:layout_weight="1"
                 android:textSize="18sp"
                 android:hint="Straße" />
@@ -61,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="date"
                 android:ems="10"
-                android:id="@+id/editText16"
+                android:id="@+id/eThausNrAb"
                 android:layout_weight="1"
                 android:textSize="18sp"
                 android:hint="Haus Nr." />
@@ -71,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="date"
                 android:ems="10"
-                android:id="@+id/editText17"
+                android:id="@+id/eTStiegeAb"
                 android:layout_weight="1"
                 android:textSize="18sp"
                 android:hint="Stiege" />
@@ -81,7 +81,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="date"
                 android:ems="10"
-                android:id="@+id/editText15"
+                android:id="@+id/eTtuerAb"
                 android:layout_weight="1"
                 android:textSize="18sp"
                 android:hint="Tür Nr." />
@@ -97,7 +97,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:ems="10"
-                android:id="@+id/editText19"
+                android:id="@+id/eTGemeindeAb"
                 android:layout_weight="1"
                 android:hint="Ortsgemeinde" />
 
@@ -106,7 +106,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:ems="10"
-                android:id="@+id/editText18"
+                android:id="@+id/eTPlzAb"
                 android:layout_weight="1"
                 android:hint="Postleitzahl" />
         </LinearLayout>
@@ -127,7 +127,6 @@
                 android:textStyle="normal|bold"
                 android:textColor="@color/colorPrimaryDark" />
         </LinearLayout>
-
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -142,19 +141,17 @@
                     android:text="ja"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/radioButton"
+                    android:id="@+id/rBJaAb"
                     android:layout_weight="1" />
 
                 <RadioButton
                     android:text="Nein"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/radioButton2"
+                    android:id="@+id/rBNeinAb"
                     android:layout_weight="1" />
             </RadioGroup>
-
         </LinearLayout>
-
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -165,7 +162,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:ems="10"
-                android:id="@+id/editText20"
+                android:id="@+id/eTStaatAb"
                 android:layout_weight="1"
                 android:hint="Angabe des Staates" />
         </LinearLayout>
@@ -179,7 +176,7 @@
                 android:text="zurück"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/button5"
+                android:id="@+id/btnBackAb"
                 android:layout_weight="1"
                 android:onClick="goBack" />
 
@@ -187,7 +184,7 @@
                 android:text="Speichern und zurück Home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/button2"
+                android:id="@+id/btnStoreAb"
                 android:layout_weight="1"
                 android:onClick="saveAndHome" />
         </LinearLayout>
